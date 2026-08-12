@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecasting</title>
+
+    <link rel="stylesheet" href="weather.css1`   ">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Weather Forecast</h1>
+        <p class="subtitle">Real-Time Weather Information</p>
+
+      
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..."
+            >
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+        </div>
+
+      
+        <p id="loading" class="loading">Loading...</p>
+
+       
+        <p id="error" class="error"></p>
+
+       
+        <div id="weather" class="weather-card">
+
+            <div class="location">
+                <h2 id="cityName">Salem</h2>
+                <p id="countryName">India</p>
+            </div>
+
+            <div class="weather-main">
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div>
+                    <h1 id="temperature">--°C</h1>
+                    <p id="description">--</p>
+                </div>
+
+            </div>
+
+            
+            <div class="details">
+
+                <div class="detail-box">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💨</span>
+                    <p>Wind Speed</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feels">--°C</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>☁️</span>
+                    <p>Cloud Cover</p>
+                    <strong id="cloud">--%</strong>
+                </div>
+
+            </div>
+
+            <p class="updated">
+                Last updated: <span id="updatedTime">--</span>
+            </p>
+
+        </div>
+
+        <h2 class="forecast-title">7-Day Forecast</h2>
+
+        <div id="forecast" class="forecast-container"></div>
+
+        <footer>
+            Weather data provided by Open-Meteo
+        </footer>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+</html>
